@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.8ff8d6a1.css",
-    "main.js": "/Portfolio/static/js/main.4d589005.js",
-    "static/js/787.5c0b2d12.chunk.js": "/Portfolio/static/js/787.5c0b2d12.chunk.js",
-    "static/media/bouncygame.png": "/Portfolio/static/media/bouncygame.ae1100fd6253807795b3.png",
-    "static/media/home-bg.jpg": "/Portfolio/static/media/home-bg.4a229aa590a680fd9f6d.jpg",
-    "static/media/bouncymenu.png": "/Portfolio/static/media/bouncymenu.251b741214b903f20cfe.png",
-    "static/media/weather.png": "/Portfolio/static/media/weather.07815d6d612ca58724f6.png",
-    "static/media/mdeditor.png": "/Portfolio/static/media/mdeditor.86a1855a081e295a38c9.png",
-    "static/media/codeEditor.png": "/Portfolio/static/media/codeEditor.7eb84c4dac48a11d427c.png",
-    "static/media/about.png": "/Portfolio/static/media/about.83713a5e844563002051.png",
-    "static/media/weather2.png": "/Portfolio/static/media/weather2.616a13ee64798e03a676.png",
-    "static/media/uurl.webp": "/Portfolio/static/media/uurl.da1dc692f20abbaf26c6.webp",
-    "static/media/menu.png": "/Portfolio/static/media/menu.cd410e1e098ef6d9b606.png",
-    "static/media/home-min.svg": "/Portfolio/static/media/home-min.f1da939a346e0c89f5e43b07a08be5c7.svg",
-    "static/media/game.webp": "/Portfolio/static/media/game.295f86ed324e983af618.webp",
-    "index.html": "/Portfolio/index.html",
-    "static/media/pre.svg": "/Portfolio/static/media/pre.7af3e11422fd4fe64b50.svg",
-    "main.8ff8d6a1.css.map": "/Portfolio/static/css/main.8ff8d6a1.css.map",
-    "main.4d589005.js.map": "/Portfolio/static/js/main.4d589005.js.map",
-    "787.5c0b2d12.chunk.js.map": "/Portfolio/static/js/787.5c0b2d12.chunk.js.map"
+    "main.css": "/static/css/main.d5d25220.css",
+    "main.js": "/static/js/main.a6abde1d.js",
+    "static/js/787.5c0b2d12.chunk.js": "/static/js/787.5c0b2d12.chunk.js",
+    "static/media/bouncygame.png": "/static/media/bouncygame.ae1100fd6253807795b3.png",
+    "static/media/home-bg.jpg": "/static/media/home-bg.4a229aa590a680fd9f6d.jpg",
+    "static/media/bouncymenu.png": "/static/media/bouncymenu.251b741214b903f20cfe.png",
+    "static/media/weather.png": "/static/media/weather.07815d6d612ca58724f6.png",
+    "static/media/mdeditor.png": "/static/media/mdeditor.86a1855a081e295a38c9.png",
+    "static/media/codeEditor.png": "/static/media/codeEditor.7eb84c4dac48a11d427c.png",
+    "static/media/about.png": "/static/media/about.83713a5e844563002051.png",
+    "static/media/weather2.png": "/static/media/weather2.616a13ee64798e03a676.png",
+    "static/media/uurl.webp": "/static/media/uurl.da1dc692f20abbaf26c6.webp",
+    "static/media/menu.png": "/static/media/menu.cd410e1e098ef6d9b606.png",
+    "static/media/home-min.svg": "/static/media/home-min.f1da939a346e0c89f5e43b07a08be5c7.svg",
+    "static/media/game.webp": "/static/media/game.295f86ed324e983af618.webp",
+    "index.html": "/index.html",
+    "static/media/pre.svg": "/static/media/pre.7af3e11422fd4fe64b50.svg",
+    "main.d5d25220.css.map": "/static/css/main.d5d25220.css.map",
+    "main.a6abde1d.js.map": "/static/js/main.a6abde1d.js.map",
+    "787.5c0b2d12.chunk.js.map": "/static/js/787.5c0b2d12.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ff8d6a1.css",
-    "static/js/main.4d589005.js"
+    "static/css/main.d5d25220.css",
+    "static/js/main.a6abde1d.js"
   ]
 }
