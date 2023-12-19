@@ -23,13 +23,13 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       upadateLoad(false);
-    }, 1200);
+    }, 800);
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <Router>
+    <Router basename="/Portfolio/">
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
