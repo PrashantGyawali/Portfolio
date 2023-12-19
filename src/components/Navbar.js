@@ -35,7 +35,11 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Brand className="brand-name d-flex" href="/">Prashant Gyawali</Navbar.Brand>       
+        <Navbar.Brand className="brand-name d-flex">
+        <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
+
+          Prashant Gyawali
+            </Nav.Link></Navbar.Brand>       
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {

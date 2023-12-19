@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import { ImBook, ImLaptop, ImPacman, ImPointRight } from "react-icons/im";
+import { ImBook, ImLaptop, ImPacman} from "react-icons/im";
 
 function AboutCard() {
   return (
