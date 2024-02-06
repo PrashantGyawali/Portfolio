@@ -78,7 +78,7 @@ function Projects() {
               title="Pass The Bomb"
               description="A simple realtime multiplayer game made using websockets.The game allows people to create their own rooms and join other rooms with at max 6 players. A bomb is ticking that will explode after random time. Pass the bomb to others before it explodes. The game supports custom host i.e. anyone can host the server or forward their ports and address if they have the server file. The game is currently publicly hosted on render."
               ghLink="https://github.com/PrashantGyawali/PassTheBomb"
-              demoLink="prashantgyawali.github.io/PassTheBomb/"
+              demoLink="https://prashantgyawali.github.io/PassTheBomb/"
             />
           </Col>
 
