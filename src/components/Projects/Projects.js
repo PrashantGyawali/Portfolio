@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useRef, useState} from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
@@ -12,17 +12,26 @@ import bouncygame from "../../Assets/Projects/bouncygame.png";
 import weather from "../../Assets/Projects/weather.png"
 import weather2 from "../../Assets/Projects/weather2.png"
 import uurl from "../../Assets/Projects/uurl.webp";
+import CodeWriteImg1 from "../../Assets/Projects/codeWrite2Img1.jpg";
+import CodeWrite2Img2 from "../../Assets/Projects/codeWrite2Img2.png";
+import CodeWrite2Img3 from "../../Assets/Projects/codeWrite2Img3.png";
+import CodeWrite2Img4 from "../../Assets/Projects/codeWrite2Img4.png";
+import CodeWrite2Img5 from "../../Assets/Projects/codeWrite2Img5.png";
 
 
 function Projects() {
   const [CodeWriteImg,setCodeWriteImg]=useState(0);
+  const [CodeWrite2Img,setCodeWrite2Img]=useState(0);
   const [PassTheBombImg,setPassTheBombImg]=useState(0);
   const [sudokuImg,setSudokuImg]=useState(0);
   const [uurlImg,setuurlImg]=useState(0);
   const [weatherImg,setWeatherImg]= useState(0);
   const [bouncyBallsImg,setBouncyBallsImg]=useState(0);
 
+  const timer=useRef(null);
+
   const imageTable={
+    CodeWrite2:[CodeWriteImg1,CodeWrite2Img2,CodeWrite2Img3,CodeWrite2Img4,CodeWrite2Img5],
     CodeWrite:[codeEditor,mdEditor],
     PassTheBomb:[bombmenu,bombgame],
     Sudoku:[sudoku],
@@ -30,7 +39,10 @@ function Projects() {
     weather:[weather,weather2],
     bouncyBalls:[bouncymenu,bouncygame]
   }
-  const projectTable={
+  const projectTable=useRef();
+
+  projectTable.current={
+    CodeWrite2:[CodeWrite2Img,setCodeWrite2Img],
     CodeWrite:[CodeWriteImg,setCodeWriteImg],
     PassTheBomb:[PassTheBombImg,setPassTheBombImg],
     Sudoku:[sudokuImg,setSudokuImg],
@@ -38,17 +50,34 @@ function Projects() {
     weather:[weatherImg,setWeatherImg],
     bouncyBalls:[bouncyBallsImg,setBouncyBallsImg]
   }
+
+
+
+
   const imageChange=(projectname)=>{
-    if (projectTable[projectname][0]<imageTable[projectname].length-1)
+    if (projectTable.current[projectname][0]<imageTable[projectname].length-1)
     {
-      projectTable[projectname][1](projectTable[projectname][0]+1);
+      projectTable.current[projectname][1](projectTable.current[projectname][0]+1);
     }
     else{
-      projectTable[projectname][1](0);
-  
+      projectTable.current[projectname][1](0);
     }
   }
 
+  const continuousImageChange=(projectname)=>{
+    timer.current=setInterval(()=>{imageChange(projectname)},1600);
+  }
+
+  const stopContinuousImageChange=()=>{
+    clearInterval(timer.current);
+  }
+
+  const nextImage=(projectname)=>{
+    imageChange(projectname);
+    //reset the interval
+    clearInterval(timer.current);
+    timer.current=setInterval(()=>{imageChange(projectname)},1600);
+  }
 
   return (
     <Container fluid className="project-section">
@@ -61,8 +90,20 @@ function Projects() {
           Here are some projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          
-        <Col md={4} className="project-card" onClick={()=>imageChange("CodeWrite")}>
+
+
+        <Col md={4} className="project-card" onClick={()=>nextImage("CodeWrite2")} onMouseEnter={()=>continuousImageChange("CodeWrite2")}  onMouseLeave={stopContinuousImageChange}>
+            <ProjectCard
+              imgPath={imageTable["CodeWrite2"][CodeWrite2Img]}
+              title="CodeWrite-2.0"
+              description="Improved online web and markdown editor. Now with support for multiple projects, cloud storage, code sharing and deployment. Also includes inbuilt codesnippet tool to take beautiful screenshots of code.  "
+              ghLink="https://github.com/PrashantGyawali/CodeWrite-2"
+              demoLink="https://codewrite-2.vercel.app/"              
+            />
+          </Col>  
+
+
+        <Col md={4} className="project-card" onClick={()=>nextImage("CodeWrite")} onMouseEnter={()=>continuousImageChange("CodeWrite")}  onMouseLeave={stopContinuousImageChange}>
             <ProjectCard
               imgPath={imageTable["CodeWrite"][CodeWriteImg]}
               title="CodeWrite"
@@ -72,7 +113,7 @@ function Projects() {
             />
           </Col>
 
-          <Col md={4} className="project-card" onClick={()=>imageChange("PassTheBomb")}>
+          <Col md={4} className="project-card" onClick={()=>imageChange("PassTheBomb")} onMouseEnter={()=>continuousImageChange("PassTheBomb")} onMouseLeave={stopContinuousImageChange}>
             <ProjectCard
               imgPath={imageTable["PassTheBomb"][PassTheBombImg]}
               title="Pass The Bomb"
@@ -82,7 +123,7 @@ function Projects() {
             />
           </Col>
 
-          <Col md={4} className="project-card" onClick={()=>imageChange("Sudoku")}>
+          <Col md={4} className="project-card" onClick={()=>imageChange("Sudoku")} onMouseEnter={()=>continuousImageChange("Sudoku")} onMouseLeave={stopContinuousImageChange}>
             <ProjectCard
               imgPath={imageTable["Sudoku"][sudokuImg]}
               title="Sudoku"
@@ -92,7 +133,7 @@ function Projects() {
             />
           </Col>
 
-          <Col md={4} className="project-card" onClick={()=>imageChange("uurl")}>
+          <Col md={4} className="project-card" onClick={()=>imageChange("uurl")} onMouseEnter={()=>continuousImageChange("uurl")} onMouseLeave={stopContinuousImageChange}>
             <ProjectCard
               imgPath={imageTable["uurl"][uurlImg]}
               title="uurl"
@@ -102,7 +143,7 @@ function Projects() {
             />
           </Col>
 
-          <Col md={4} className="project-card" onClick={()=>imageChange("weather")}>
+          <Col md={4} className="project-card" onClick={()=>imageChange("weather")} onMouseEnter={()=>continuousImageChange("weather")} onMouseLeave={stopContinuousImageChange}>
             <ProjectCard
               imgPath={imageTable["weather"][weatherImg]}
               title="Weather App"
@@ -112,7 +153,7 @@ function Projects() {
             />
           </Col>
 
-          <Col md={4} className="project-card" onClick={()=>imageChange("bouncyBalls")}>
+          <Col md={4} className="project-card" onClick={()=>imageChange("bouncyBalls")} onMouseEnter={()=>continuousImageChange("bouncyBalls")} onMouseLeave={stopContinuousImageChange}>
             <ProjectCard
               imgPath={imageTable["bouncyBalls"][bouncyBallsImg]}
               title="Bouncy Balls"
