@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.a7987392.css",
-    "main.js": "./static/js/main.2b5a4db4.js",
+    "main.js": "./static/js/main.27414858.js",
     "static/js/787.5c0b2d12.chunk.js": "./static/js/787.5c0b2d12.chunk.js",
     "static/media/bouncygame.png": "./static/media/bouncygame.ae1100fd6253807795b3.png",
     "static/media/home-bg.jpg": "./static/media/home-bg.4a229aa590a680fd9f6d.jpg",
@@ -23,11 +23,11 @@
     "index.html": "./index.html",
     "static/media/pre.svg": "./static/media/pre.7af3e11422fd4fe64b50.svg",
     "main.a7987392.css.map": "./static/css/main.a7987392.css.map",
-    "main.2b5a4db4.js.map": "./static/js/main.2b5a4db4.js.map",
+    "main.27414858.js.map": "./static/js/main.27414858.js.map",
     "787.5c0b2d12.chunk.js.map": "./static/js/787.5c0b2d12.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a7987392.css",
-    "static/js/main.2b5a4db4.js"
+    "static/js/main.27414858.js"
   ]
 }
