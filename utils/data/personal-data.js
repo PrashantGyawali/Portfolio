@@ -1,0 +1,16 @@
+export const personalData = {
+  name: "Prashant Gyawali",
+  profile: '/profile.svg',
+  designations: ["Software Developer","Computer Engineering Student","Freelancer","Full Stack Developer","Game Developer",],
+  description: "My name is Prashant Gyawali. I am an enthusiastic programmer and engineer. I am a quick learner with a self-learning attitude. I love to learn and explore new technologies and am passionate about problem-solving. I love almost all the stacks of web application development and love to make the web more open to the world. My core skill is based on JavaScript and I love to do most of the things using JavaScript. I am available for any kind of job opportunity that suits my skills and interests.",
+  email: 'example@gmail.com',
+  phone: '+977 98XXXXXXXX',
+  address: 'Kathmandu, Nepal',
+  github: 'https://github.com/PrashantGyawali',
+  facebook: 'https://github.com/PrashantGyawali',
+  linkedIn: 'https://np.linkedin.com/in/prashant-gyawali-257138233/',
+  leetcode: 'https://leetcode.com/PrashantGyawali/',
+  twitter: 'https://np.linkedin.com/in/prashant-gyawali-257138233',
+  resume: "https://np.linkedin.com/in/prashant-gyawali-257138233/",
+  blog:"https://blog.gyawaliprashant.com.np",
+}

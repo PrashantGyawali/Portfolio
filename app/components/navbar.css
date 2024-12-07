@@ -1,0 +1,26 @@
+.nav-item {
+	display: inline-block;
+	margin-right: 20px;
+	position: relative;
+}
+
+.nav-item a {
+	position: relative;
+	z-index: 1;
+}
+
+.nav-item a:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 0;
+	height: 2px; /* Set underline thickness */
+	background-color: #f5bd5b;
+	transition: width 0.3s ease-out;
+	z-index: -1;
+}
+
+.nav-item a:hover:after {
+	width: 100%; /* On hover, increase width */
+}
