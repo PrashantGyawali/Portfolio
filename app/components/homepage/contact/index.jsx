@@ -9,6 +9,7 @@ import { IoLogoGithub, IoMdCall } from "react-icons/io";
 import { MdAlternateEmail } from "react-icons/md";
 import lottieFile from "/public/lottie/contact.json";
 import dynamic from "next/dynamic";
+import { contactsData } from "@/utils/data/contactsData";
 const AnimationLottie= dynamic(()=>import('../../helper/animation-lottie'),{loading:()=>null,ssr:false});
 
 function ContactSection() {
@@ -43,17 +44,18 @@ function ContactSection() {
 								className="bg-[#8b98a5] p-2 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
 								size={36}
 							/>
-							<a href={`mailto:${personalData.email}`}>
-								{personalData.email}
+							<a href={`mailto:${contactsData.email}`}>
+								{contactsData.email}
 							</a>
 						</p>
-						<p className="text-sm md:text-xl flex items-center gap-3">
+						{contactsData.phone && <p className="text-sm md:text-xl flex items-center gap-3">
 							<IoMdCall
 								className="bg-[#8b98a5] p-2 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
 								size={36}
 							/>
-							<span>{personalData.phone}</span>
+							<span>{contactsData.phone}</span>
 						</p>
+						}
 						<p className="text-sm md:text-xl flex items-center gap-3">
 							<CiLocationOn
 								className="bg-[#8b98a5] p-2 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
