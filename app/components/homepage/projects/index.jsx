@@ -20,7 +20,7 @@ const Projects = () => {
 
       <div className="pt-24">
         <div className="grid grid-cols-12  gap-6 lg:gap-y-20">
-          {[...projectsData].slice(0, 8).map((project, index) => (
+          {[...projectsData].slice(0, 6).map((project, index) => (
             <div
               id={`sticky-card-${index + 1}`}
               key={index}
